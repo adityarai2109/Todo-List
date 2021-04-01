@@ -1,51 +1,65 @@
-.app {
+body {
   background: #893168;
-  height: 100vh;
-  padding: 30px;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  font-size: 1.2rem;
+  word-wrap: break-word;
 }
 .todo-list {
-  margin-left: 50%;
-  transform: translate(-50%);
-  background: #ffffff;
+  background: aliceblue;
   border-radius: 10px;
-  width: 50vw;
-  padding: 20px;
+  padding: 1rem;
+  width: 60vw;
+}
+.heading {
+  text-align: center;
+  color: aliceblue;
 }
 .todo {
+  padding: 0.5rem 1rem 0.5rem 1rem;
   align-items: center;
   background: #4a1942;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #ffffff;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   display: flex;
-  font-size: 16px;
+  font-size: 1rem;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding: 15px 15px;
 }
 .input {
-  padding: 15px 15px;
-  width: 95%;
-  font-size: 16px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 1.5rem 0 1.5rem 0;
   border-radius: 3px;
   background-color: #893168;
   border: none;
-  color: white;
+  color: aliceblue;
+  text-align: center;
+}
+.input::placeholder {
+  color: aliceblue;
 }
 
 button {
-  color: #fff;
+  color: aliceblue;
   background-color: #893168;
   padding: 10px;
   border-radius: 3px;
-  border: white 2px solid;
-  margin-left: 10px;
-  width: 100px;
+  border: aliceblue 2px solid;
+  margin: 0.4rem;
+  width: 5rem;
 }
 
 button:hover {
   color: #4a1942;
-  background-color: #fff;
+  background-color: aliceblue;
 }
 
 h1 {
@@ -53,4 +67,37 @@ h1 {
   text-align: center;
   margin-bottom: 40px;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .todo-list {
+    background: aliceblue;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 85vw;
+  }
+  .todo-list {
+    padding: 1rem;
+  }
+  button {
+    color: aliceblue;
+    background-color: #893168;
+    padding: 10px 0 10px 0;
+    border-radius: 3px;
+    border: aliceblue 2px solid;
+    width: 5.5rem;
+  }
+  .todo {
+    padding: 0.5rem;
+    align-items: center;
+    flex-direction: column;
+    background: #4a1942;
+    border-radius: 5px;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
 }

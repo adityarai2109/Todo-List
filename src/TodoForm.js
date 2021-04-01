@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 export default function TodoForm(props) {
   const [value, setValue] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value) return;
+    setValue(value);
     props.addTodo(value);
     setValue("");
   };

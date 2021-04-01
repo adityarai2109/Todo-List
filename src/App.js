@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Todo from "./Todo";
 import TodoForm from "./TodoForm";
 import "./App.css";
@@ -10,17 +10,14 @@ function App() {
       isCompleted: true,
     },
     {
-      text: "Get a girlfriend",
-      isCompleted: false,
-    },
-    {
       text: "Make todo list",
       isCompleted: true,
     },
+    {
+      text: "Put it on github",
+      isCompleted: true,
+    },
   ]);
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
 
   const addTodo = (text) => {
     const newTodos = [...todos, { text, isCompleted: false }];
@@ -40,9 +37,9 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="App">
+      <h1 className="heading">Todo list</h1>
       <div className="todo-list">
-        <h1>Todo list</h1>
         {todos.map((todo, index) => (
           <Todo
             key={index}

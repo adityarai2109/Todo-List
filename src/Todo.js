@@ -10,8 +10,8 @@ export default function Todo(props) {
           : "none",
       }}
     >
-      {props.todo.text}
-      <div>
+      <div className="content">{props.todo.text}</div>
+      <div className="buttons">
         <button onClick={() => props.completeTodo(props.index)}>
           {props.todo.isCompleted ? "Undo" : "Completed"}
         </button>
