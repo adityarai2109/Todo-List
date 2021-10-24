@@ -79,7 +79,8 @@ button {
   border-radius: 3px;
   border: aliceblue 2px solid;
   margin: 0.4rem;
-  width: 5.5rem;
+  min-width: 5.5rem;
+  width: auto;
 }
 
 button:hover {
